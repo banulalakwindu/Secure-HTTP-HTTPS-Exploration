@@ -52,9 +52,9 @@ Send a GET request to http://localhost:3000 (use your browser or Postman)
 
 Capture Request and Response from Wireshark
 
-### HTTPS Endpoint
+### :lock: HTTPS Endpoint
 
-#### Step 05: SSL Key
+#### :five: Step 05: SSL Key
 
 Generate an SSL key size of 2048
 
@@ -62,7 +62,7 @@ Generate an SSL key size of 2048
 openssl genrsa -des3 -out server.key 2048
 ```
 
-#### Step 06: SSL Certificate
+#### :six: Step 06: SSL Certificate
 
 Create an SSL certificate using that key
 
@@ -70,25 +70,25 @@ Create an SSL certificate using that key
 openssl req -nodes -sha256 -new -x509 -keyout server.key -out server.cert
 ```
 
-#### Step 07: Creating a HTTPS Endpoint using Node
+#### :seven: Step 07: Creating a HTTPS Endpoint using Node
 
 - [appNew.js](appNew.js)
 
-#### Step 08: Run Node Server
+#### :eight: Step 08: Run Node Server
 
 ```bash
 node appNew.js
 ```
 
-#### Step 09: Request from Server
+#### :nine: Step 09: Request from Server
 
 Send a GET request to https://localhost:3000 (use your browser or Postman)
 
-#### Step 10: Capture Details
+#### :keycap_ten: Step 10: Capture Details
 
 Capture Request and Response from Wireshark
 
-## References
+## :books: References
 
 1. [Node.js tutorial in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial)
 2. [How to create a REST API with Node.js and Express](https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/)
