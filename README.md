@@ -1,6 +1,6 @@
 # 🚀 Secure HTTP HTTPS Exploration
 
-## Introduction
+## :bulb: Introduction
 
 🎯 **AIM:** Learn fundamental principles of computer and network security by studying attacks on computer systems, networks, and the Web. Understand how these attacks work and how to prevent and detect them.
 
@@ -10,7 +10,7 @@
 - To understand the cryptographic usage in the secure protocol.
 - To understand the fundamental principles of API.
 
-## Prerequisites
+## :gear: Prerequisites
 
 - Node.js installed
 - Express.js installed
@@ -30,25 +30,25 @@ npm install express
 set OPENSSL_CONF=C:\Program Files\OpenSSL-Win64\bin\openssl.cfg
 ```
 
-## Tasks
+## :clipboard: Tasks
 
-### HTTP Endpoint
+### :computer: HTTP Endpoint
 
-#### Step 01: Creating a HTTP Endpoint using Node
+#### :one: Step 01: Creating a HTTP Endpoint using Node
 
 - [app.js](app.js)
 
-#### Step 02: Run Node Server
+#### :two: Step 02: Run Node Server
 
 ```bash
 node app.js
 ```
 
-#### Step 03: Request from Server
+#### :three: Step 03: Request from Server
 
 Send a GET request to http://localhost:3000 (use your browser or Postman)
 
-#### Step 04: Capture Details
+#### :four: Step 04: Capture Details
 
 Capture Request and Response from Wireshark
 
