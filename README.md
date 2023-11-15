@@ -20,6 +20,7 @@ npm install express
 ```
 
 - OpenSSL installed
+
   **Windows**
 
   - Download OpenSSL: [Windows OpenSSL Download](https://slproweb.com/products/Win32OpenSSL.html)
@@ -48,9 +49,9 @@ node app.js
 
 Send a GET request to http://localhost:3000 (use your browser or Postman)
 
-#### :four: Step 04: Capture Details
+#### :four: Step 04: Capture Request and Response from Wireshark
 
-Capture Request and Response from Wireshark
+Analyzing the Wireshark captures for the HTTP endpoint, you can observe that the communication between the client and server occurs in plain text. The lack of encryption in HTTP allows for easy inspection of the transmitted data. Both the client's request and the server's response are visible, making it susceptible to eavesdropping.
 
 ### :lock: HTTPS Endpoint
 
@@ -84,9 +85,29 @@ node appNew.js
 
 Send a GET request to https://localhost:3000 (use your browser or Postman)
 
-#### :keycap_ten: Step 10: Capture Details
+#### :keycap_ten: Step 10: Capture Request and Response from Wireshark
 
-Capture Request and Response from Wireshark
+In contrast, when analyzing the Wireshark captures for the HTTPS endpoint, you'll notice a significant difference. The data exchanged between the client and server is encrypted, thanks to the use of HTTPS. The TLS handshake process, reflected in the captured packets, establishes a secure channel for communication. The visibility into the actual content of the communication is limited due to encryption.
+
+## :microscope: Observations:
+
+### Key Differences:
+
+- **HTTP (Step 04):**
+
+  - **Visibility:** The lack of encryption in HTTP facilitates transparent communication, but it compromises security. Both the request and response are easily readable.
+
+- **HTTPS (Step 10):**
+
+  - **Encryption:** The TLS handshake process and subsequent data exchange in HTTPS ensure that the transmitted information is encrypted. This encryption provides confidentiality and integrity but limits direct visibility into the data.
+
+### Trade-off Between Security and Visibility:
+
+The contrast between HTTP and HTTPS highlights the trade-off between security and visibility. While HTTP offers transparency, it compromises security. HTTPS, with its encryption, provides a secure channel but limits direct visibility into the transmitted data.
+
+### Conclusion:
+
+🚀 The lab experience underscores the importance of adopting secure communication practices. Choosing between HTTP and HTTPS should be driven by the nature of the data being transmitted and the security requirements of the application. HTTPS, with its encryption mechanisms, is recommended for securing sensitive information and preventing unauthorized access.
 
 ## :books: References
 
